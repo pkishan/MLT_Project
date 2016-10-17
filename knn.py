@@ -25,5 +25,5 @@ for i in k:
 	accuracy.append(temp)
 	number.append(i)
 
-plt.plot(number,accuray,'r-')
+plt.plot(number,accuracy,'r-')
 plt.axis([0, 20, 0.5, 1])
