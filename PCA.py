@@ -10,10 +10,10 @@ from sklearn.decomposition import PCA
 data = scipy.io.loadmat('mnist_big.mat')
 
 Xtest = data['X_test']
-Ytest = np.squeeze(data['Y_test'])
+Y_test = np.squeeze(data['Y_test'])
 
 Xtrain = data['X_train']
-Ytrain = np.squeeze(data['Y_train'])
+Y_train = np.squeeze(data['Y_train'])
 
 dim = [ 50, 100, 200, 300, 500]
 
@@ -24,4 +24,3 @@ for i in dim:
 	pca.fit(X)
 	pca.transform(temp1)
 
-	
