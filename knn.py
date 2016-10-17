@@ -27,3 +27,4 @@ for i in k:
 
 plt.plot(number,accuracy,'r-')
 plt.axis([0, 20, 0.5, 1])
+plot.show()
