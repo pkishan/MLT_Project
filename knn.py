@@ -1,6 +1,7 @@
 import scipy.io
 import numpy as np
 from sklearn.neighbors import KNeighborsClassifier
+from sklearn.metrics import accuracy_score
 
 
 data = scipy.io.loadmat('mnist_big.mat')
