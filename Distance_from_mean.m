@@ -1,4 +1,4 @@
-load ('mnist_hw1.mat') ;
+load ('mnist.mat') ;
 Euclidian_Norm = zeros(10000, 10) ;
 Y_Predicted = zeros(10000,1);
 Accuracy = []
@@ -24,8 +24,6 @@ for i = 1:40
 	end
 
 	correct_count = sum(Y_Predicted == Y_test) ;
-
-    i
 
 	Accuracy = [Accuracy, correct_count/100]
     Train_count = [Train_count, 50*i] ;
