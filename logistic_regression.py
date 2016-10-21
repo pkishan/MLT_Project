@@ -16,7 +16,7 @@ X_train = data['X_train']
 Y_train = np.squeeze(data['Y_train'])
 
 import time
-
+start_time = time.time() 
 model = LogisticRegression()
 model.fit(X_train, Y_train)
 
