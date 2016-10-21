@@ -33,5 +33,5 @@ for i in k:
 print("The time taken by the knn algorithm is ( %s ) seconds" % (time.time() - start_time))
 
 plt.plot(number,accuracy,'r-')
-plt.axis([0, 20, 0.5, 1])
+# plt.axis([0, 20, 0.5, 1])
 plt.show()

@@ -5,22 +5,17 @@ from sklearn.metrics import accuracy_score
 import matplotlib.pyplot as plt
 from sklearn.decomposition import PCA
 
-
-
 data = scipy.io.loadmat('mnist_big.mat')
 
-Xtest = data['X_test']
-Y_test = np.squeeze(data['Y_test'])
-
 Xtrain = data['X_train']
-Y_train = np.squeeze(data['Y_train'])
+Ytrain = np.squeeze(data['Y_train'])
 
-dim = [ 50, 100, 200, 300, 500]
+dim = [50, 75, 100]
 
 for i in dim:
+	print i
 	pca = PCA(n_components=i)
-	X_train = Xtrain
-	X_test = Xtest 
-	pca.fit(X)
-	pca.transform(temp1)
-
+	X_train = Xtrain 
+	pca.fit(Xtrain)
+	pca.transform(X_train)
+	X_train.dump(str(i) + "_pca.p")
